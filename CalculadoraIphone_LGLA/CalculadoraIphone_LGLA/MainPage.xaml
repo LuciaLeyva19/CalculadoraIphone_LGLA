@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraIphone_LGLA.MainPage"
+             BackgroundColor="Black">
+
+    <StackLayout Padding="20" VerticalOptions="Center">
+        <!-- Mostrar el resultado -->
+        <Entry x:Name="Pantalla"
+               HorizontalTextAlignment="End"
+               Text="0"
+               TextColor="White"
+               FontSize="40"
+               BackgroundColor="Black"
+               HeightRequest="80"
+               IsReadOnly="True" />
+
+       
+        <Grid RowSpacing="10" ColumnSpacing="10">
+            <!-- filas y columnas -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Primera fila-->
+            <Button Text="AC" Grid.Row="0" Grid.Column="0" Clicked="Limpiar" BackgroundColor="Gray" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="60" />
+            <Button Text="←" Grid.Row="0" Grid.Column="1" Clicked="borrarUno" BackgroundColor="Gray" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="60" FontSize="20" />
+            <Button Text="%" Grid.Row="0" Grid.Column="2" Clicked="Operadores" BackgroundColor="Gray" TextColor="White" CornerRadius="50" HeightRequest="95" WidthRequest="80" FontSize="20"/>
+            <Button Text="÷" Grid.Row="0" Grid.Column="3" Clicked="Operadores" BackgroundColor="Orange" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" FontSize="20"/>
+
+            <!-- Segunda fila-->
+            <Button Text="7" Grid.Row="1" Grid.Column="0" Clicked="Numeros" BackgroundColor="#1C1C1C" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" />
+            <Button Text="8" Grid.Row="1" Grid.Column="1" Clicked="Numeros" BackgroundColor="#1C1C1C" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" />
+            <Button Text="9" Grid.Row="1" Grid.Column="2" Clicked="Numeros" BackgroundColor="#1C1C1C" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" />
+            <Button Text="×" Grid.Row="1" Grid.Column="3" Clicked="Operadores" BackgroundColor="Orange" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" FontSize="20"/>
+
+            <!-- Tercera fila-->
+            <Button Text="4" Grid.Row="2" Grid.Column="0" Clicked="Numeros" BackgroundColor="#1C1C1C" TextColor="White"
+                    CornerRadius="60" HeightRequest="95" WidthRequest="80" />
+            <Button Text="5" Grid.Row="2" Grid.Column="1" Clicked="Numeros" BackgroundColor="#1C1C1C" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" />
+            <Button Text="6" Grid.Row="2" Grid.Column="2" Clicked="Numeros" BackgroundColor="#1C1C1C" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" />
+            <Button Text="-" Grid.Row="2" Grid.Column="3" Clicked="Operadores" BackgroundColor="Orange" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" FontSize="25"/>
+
+            <!-- Cuarta fila-->
+            <Button Text="1" Grid.Row="3" Grid.Column="0" Clicked="Numeros" BackgroundColor="#1C1C1C" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" />
+            <Button Text="2" Grid.Row="3" Grid.Column="1" Clicked="Numeros" BackgroundColor="#1C1C1C" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" />
+            <Button Text="3" Grid.Row="3" Grid.Column="2" Clicked="Numeros" BackgroundColor="#1C1C1C" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" />
+            <Button Text="+" Grid.Row="3" Grid.Column="3" Clicked="Operadores" BackgroundColor="Orange" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" FontSize="20" />
+
+            <!-- Quinta fila-->
+            <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Clicked="Numeros" BackgroundColor="#1C1C1C" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="170" />
+            <Button Text="." Grid.Row="4" Grid.Column="2" Clicked="Decimal" BackgroundColor="#1C1C1C" TextColor="White" CornerRadius="50" HeightRequest="95" WidthRequest="80"/>
+            <Button Text="=" Grid.Row="4" Grid.Column="3" Clicked="Igual" BackgroundColor="Orange" TextColor="White"
+                    CornerRadius="50" HeightRequest="95" WidthRequest="80" FontSize="20" />
+        </Grid>
+    </StackLayout>
+</ContentPage>
